@@ -35,6 +35,12 @@ public class FilteringApples{
 			}
 		});
 		System.out.println(redApples2);
+		//todo 按照重量排序然后再倒叙，然后又按照颜色排序 (这个东西就叫比较器链)
+		inventory.sort(Comparator.comparing(Apple::getWeight)
+				.reversed()
+				.thenComparing(Apple::getColor));
+
+		//todo
 
 	}
 

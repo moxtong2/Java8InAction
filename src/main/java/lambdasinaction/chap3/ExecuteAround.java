@@ -1,6 +1,8 @@
 package lambdasinaction.chap3;
 
 import java.io.*;
+import java.util.concurrent.Semaphore;
+
 public class ExecuteAround {
 
 	public static void main(String ...args) throws IOException{
@@ -10,7 +12,8 @@ public class ExecuteAround {
         System.out.println(result);
 
         System.out.println("---");
-
+        Semaphore semaphore = new Semaphore(0);
+		semaphore.release();
 		String oneLine = processFile((BufferedReader b) -> b.readLine());
 		System.out.println(oneLine);
 

@@ -11,8 +11,6 @@ public class PartitionPrimeNumbers {
 
     public static void main(String ... args) {
         System.out.println("Numbers partitioned in prime and non-prime: " + partitionPrimes(100));
-        System.out.println("Numbers partitioned in prime and non-prime: " + partitionPrimesWithCustomCollector(100));
-
     }
 
     public static Map<Boolean, List<Integer>> partitionPrimes(int n) {
